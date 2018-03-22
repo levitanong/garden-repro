@@ -4,7 +4,7 @@
   :min-lein-version "2.7.0"
 
   :dependencies [[org.clojure/clojure "1.9.0"]
-                 [org.clojure/clojurescript "1.10.191"]
+                 [org.clojure/clojurescript "1.10.217"]
                  [fulcrologic/fulcro "2.4.2"]
                  [fulcrologic/fulcro-spec "2.0.4" :scope "test" :exclusions [fulcrologic/fulcro]]
                  [org.clojure/tools.reader "1.3.0-alpha3"]

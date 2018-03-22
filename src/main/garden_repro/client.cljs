@@ -3,6 +3,7 @@
    [fulcro.client :as fc]
    [fulcro-css.css :as css]
    [garden-repro.ui.root :as root]
+   [garden.core :as g]
    [fulcro.alpha.i18n :as i18n]
    yahoo.intl-messageformat-with-locales))
 
@@ -15,7 +16,12 @@
 
 (defn mount []
   (reset! app (fc/mount @app root/Root "app"))
-  (css/upsert-css "my-css" root/Root))
+  ;; fails
+  (css/localize-css root/Root)
+  ;; does not fail
+  (css/get-local-rules root/Root)
+  ;; Chances are that the problem lies in the specter call
+  )
 
 (defn start []
   (mount))
